@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mobileproject/BiryaniChickenPage.dart';
+import 'package:mobileproject/BurgerPage.dart';
+import 'package:mobileproject/DrinkPage.dart';
+import 'package:mobileproject/SalanChicken.dart';
+import 'package:mobileproject/pizzadesc.dart';
 class PopularItemsWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -11,6 +16,14 @@ class PopularItemsWidget extends StatelessWidget{
            // for(int i=0 ;i<10 ;i++)
             //Single item
           Padding(padding: EdgeInsets.symmetric(horizontal: 7),
+        child: GestureDetector(
+          onTap: () {
+            // Navigate to BurgerPage when the container is pressed
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BurgerPage()),
+            );
+          },
             child: Container(
               width: 170,
               height: 225,
@@ -37,6 +50,7 @@ class PopularItemsWidget extends StatelessWidget{
                             "images/burger.png",
                              height: 130,
                         ),
+
                       ),
                       Text(
                         "Hot Burger" ,
@@ -75,9 +89,18 @@ class PopularItemsWidget extends StatelessWidget{
                   ),
                 ) ,
             ),
+        )
           ),
 
             Padding(padding: EdgeInsets.symmetric(horizontal: 7),
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to BurgerPage when the container is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SalanChikenPage()),
+                  );
+                },
               child: Container(
                 width: 170,
                 height: 225,
@@ -142,8 +165,16 @@ class PopularItemsWidget extends StatelessWidget{
                   ),
                 ) ,
               ),
-            ),
+            )),
             Padding(padding: EdgeInsets.symmetric(horizontal: 7),
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to BurgerPage when the container is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PizzaDetailPage()),
+                  );
+                },
               child: Container(
                 width: 170,
                 height: 225,
@@ -208,8 +239,16 @@ class PopularItemsWidget extends StatelessWidget{
                   ),
                 ) ,
               ),
-            ),
+            )),
             Padding(padding: EdgeInsets.symmetric(horizontal: 7),
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to BurgerPage when the container is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DrinkPage()),
+                  );
+                },
               child: Container(
                 width: 170,
                 height: 225,
@@ -275,8 +314,16 @@ class PopularItemsWidget extends StatelessWidget{
                   ),
                 ) ,
               ),
-            ),
+            )),
             Padding(padding: EdgeInsets.symmetric(horizontal: 7),
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to BurgerPage when the container is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BiryaniChikenPage()),
+                  );
+                },
               child: Container(
                 width: 170,
                 height: 225,
@@ -341,7 +388,7 @@ class PopularItemsWidget extends StatelessWidget{
                   ),
                 ) ,
               ),
-            ),
+            )),
 
 
 
