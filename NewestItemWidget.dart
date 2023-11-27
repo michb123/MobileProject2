@@ -73,6 +73,7 @@ class   NewestItemWidget extends StatelessWidget{
                       ),
                   ),
 
+
                   Padding(padding: EdgeInsets.symmetric(vertical: 10 ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,11 +92,14 @@ class   NewestItemWidget extends StatelessWidget{
                     ),
                   ),
 
+
                 ],
+
               ),
             ),
 
           ),
+
             Padding(padding: EdgeInsets.symmetric(vertical: 10 ),
               child: Container(
                 width: 380 ,
@@ -175,6 +179,7 @@ class   NewestItemWidget extends StatelessWidget{
                         ],
                       ),
                     ),
+
 
                   ],
                 ),
