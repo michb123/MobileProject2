@@ -1,20 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const PizzaDetailPage(),
-    );
-  }
-}
-
 class PizzaDetailPage extends StatefulWidget {
   const PizzaDetailPage({Key? key}) : super(key: key);
 
@@ -56,13 +41,13 @@ class _PizzaDetailPageState extends State<PizzaDetailPage> {
           onPressed: () {
             // Navigate to the home page or perform any other action
             print('Home Button Pressed!');
+            Navigator.popUntil(context, (route) => route.isFirst);
           },
+
         ),
-        title: Text(
-          "Pizza Details",
-          style: TextStyle(fontSize: 24),
-        ),
-        centerTitle: true,
+
+        title: Text('Order List', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        centerTitle: true, // Center the title
       ),
       body: Container(
         color: Colors.white,
@@ -72,7 +57,7 @@ class _PizzaDetailPageState extends State<PizzaDetailPage> {
           children: [
             // Big Pizza Picture
             Image.asset(
-              "pizza.png",
+              "images/pizza.png",
               height: 200,
               width: 200,
             ),
@@ -96,7 +81,7 @@ class _PizzaDetailPageState extends State<PizzaDetailPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "\$10",
+                      "\$50",
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 10),
