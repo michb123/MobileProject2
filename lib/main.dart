@@ -46,8 +46,11 @@ class _OrderPageState extends State<OrderPage> {
           onPressed: () {
             // Navigate to the home page or perform any other action
             print('Home Button Pressed!');
+            Navigator.popUntil(context, (route) => route.isFirst);
           },
+
         ),
+
         title: Text('Order List', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
         centerTitle: true, // Center the title
       ),
@@ -67,7 +70,7 @@ class _OrderPageState extends State<OrderPage> {
                   selectedFoodOption = newValue!;
                 });
               },
-              items: <String>['Hot Pizza', 'Hot Burger', 'Cold Drink']
+              items: <String>['Hot Pizza', 'Hot Burger', 'Cold Drink', 'Chicken salan' , 'Biryani Chicken']
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
