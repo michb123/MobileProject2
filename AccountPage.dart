@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
 
+
+  const RegisterPage ({Key? key}) : super(key: key);
   @override
   _RegisterPageState createState() => _RegisterPageState();
 
@@ -63,7 +65,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
         ),
 
-        title: Text('Order List', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        title: Text('My Account', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
         centerTitle: true, // Center the title
       ),
       body: Padding(
